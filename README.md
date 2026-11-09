@@ -1,5 +1,16 @@
+---
+title: Ayush Bais Netflix Portfolio
+emoji: 🎬
+colorFrom: red
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 🎬 Ayush Bais — Digital Portfolio (Netflix Edition)
 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow?style=for-the-badge)](https://huggingface.co/spaces)
 [![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -91,41 +102,6 @@ Interactive test widgets embedded directly inside project detail modals:
 
 ---
 
-🚀 Getting Started
-
-Prerequisites
-Node.js (version 18 or higher recommended)
-npm (bundled with Node.js)
-
-Installation
-Clone the repository:
-Bash
-git clone https://github.com/<your-username>/ayush-bais-portfolio.git
-cd ayush-bais-portfolio
-
-Install dependencies:
-Bash
-npm install
-
-Launch the development server:
-Bash
-npm run dev
-Open http://localhost:3000 in your browser.
-
-Build for production:
-Bash
-npm run build
-
-📬 Contact & Inquiries
-Ayush Sunil Singh Bais
-Email: ayushsinghbais29@gmail.com
-Phone / WhatsApp: +91 8983140896
-LinkedIn: linkedin.com/in/ayush-bais-320761347
-Location: Bhanapeth Ward, Shriram Chowk, Chandrapur, Maharashtra, India
-
-📄 License
-This project is licensed under the Apache-2.0 License.
-
 ## 📁 Repository Structure
 
 ```text
@@ -160,3 +136,86 @@ This project is licensed under the Apache-2.0 License.
 ├── package.json                   # Dependencies and scripts
 ├── tsconfig.json                  # TypeScript compiler options
 └── vite.config.ts                 # Vite bundler configuration
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+- `npm` (bundled with Node.js)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/ayush-bais-portfolio.git
+   cd ayush-bais-portfolio
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Launch the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 🤗 Deploying to Hugging Face Spaces
+
+This repository comes pre-configured with a production-ready `Dockerfile` and Hugging Face metadata:
+
+1. Create a new Space on [Hugging Face Spaces](https://huggingface.co/new-space).
+2. Choose **Docker** as the Space SDK and set Space hardware to **Free CPU (basic)**.
+3. Push your repository to your Hugging Face Space git remote:
+   ```bash
+   git remote add space https://huggingface.co/spaces/<your-hf-username>/<your-space-name>
+   git push space main
+   ```
+4. Hugging Face will automatically trigger the multi-stage Docker build, launch `serve` on port `7860`, and host your live Netflix portfolio under `https://<your-hf-username>-<your-space-name>.hf.space`!
+
+---
+
+## 🚀 Deploying to Render (render.com)
+
+This repository includes a `render.yaml` Blueprint for zero-configuration, 1-click deployment on Render:
+
+1. Push this repository to your GitHub account.
+2. Sign in to [Render Dashboard](https://dashboard.render.com/).
+3. Click **New +** ➔ **Static Site** (or **Blueprints** to automatically load `render.yaml`).
+4. Connect your `ayush-bais-portfolio` repository.
+5. Use these settings (pre-filled by `render.yaml`):
+   - **Name**: `ayush-bais-portfolio`
+   - **Branch**: `main`
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `dist`
+   - **Redirects / Rewrites**: `/*` ➔ `/index.html` (Rewrite)
+6. Click **Create Static Site**. Render will build and deploy your portfolio for free with a global CDN and automatic HTTPS!
+
+---
+
+## 📬 Contact & Inquiries
+
+Feel free to connect for full-time opportunities, freelance contracts, or technical collaborations:
+
+- **Ayush Sunil Singh Bais**
+- **Email**: [ayushsinghbais29@gmail.com](mailto:ayushsinghbais29@gmail.com)
+- **Phone / WhatsApp**: [+91 8983140896](tel:8983140896)
+- **LinkedIn**: [linkedin.com/in/ayush-bais-320761347](https://linkedin.com/in/ayush-bais-320761347)
+- **Location**: Bhanapeth Ward, Shriram Chowk, Chandrapur, Maharashtra, India
+
+---
+
+## 📄 License
+
+This project is licensed under the [Apache-2.0 License](LICENSE).
